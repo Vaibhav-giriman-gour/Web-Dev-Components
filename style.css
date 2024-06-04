@@ -1,0 +1,142 @@
+/* Music player theme colors */
+/* 1.  f8f9fa
+    e9ecef
+    dee2e6
+    adb5bd
+    6c757d
+    495057
+    343a40
+    212529
+
+2.  595959
+    7f7f7f
+    a5a5a5
+    cccccc
+    f2f2f2
+
+3.  ffcbf2
+    f3c4fb
+    ecbcfd
+    e5b3fe
+    e2afff
+    deaaff
+    d8bbff
+    d0d1ff
+    c8e7ff
+    c0fdff
+
+4.  ffd6ff
+    e7c6ff
+    c8b6ff
+    b8c0ff
+    bbd0ff */
+
+/* Start of CSS */
+* {
+        margin: 0;
+        border: 0;
+        padding: 0;
+  }
+
+.body-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px
+}
+.body-header ul{
+    display: flex;
+    float: right;
+    position: relative;
+    gap: 25px;
+}
+.body-header ul li{
+    list-style: none;
+}
+.body-header ul li a{
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px 20px;
+    font-size: 1rem;
+    transition: color 0.5s, border-bottom 4s;
+}
+
+.body-header li a::before{
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    width: 20%;
+    height: 2px;
+    background: #7f7e7e;
+    transform: scaleX(0);
+    transition: transform .5s ease-in-out;
+    transform-origin: right;
+  }
+  .body-header li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  .body-header li a:hover{
+    color: #7f7e7e;
+    transition: color .5s ease-in-out;
+  }
+  .body-header .search{
+    cursor: pointer;
+    color: #fff;
+    padding: 20px 20px;
+    font-size: 1rem;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .body-header .search:hover{
+    color: #7f7e7e;
+    transition: color .5s ease-in-out;
+  }
+
+  .searchBox{
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    align-items: center;
+    transition: .5s ease-in-out;
+    background: #212529; */
+  }
+    .searchBox input{
+        background: transparent;
+        border: none;
+        outline: none;
+        height: 50px;
+        font-size: 1rem;
+        border-bottom: 2px solid #7f7e7e;
+    }
+
+

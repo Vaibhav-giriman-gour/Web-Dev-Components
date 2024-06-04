@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Arial, sans-serif; }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .search-container {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .search-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .search-container input[type="text"]:focus {
+    opacity: 1;
+  }
+  
+  .search-container button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) { display: none; }
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar" id="myTopnav">
+  <a href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <div class="search-container">
+    <input type="text" placeholder="Search...">
+    <button type="submit">🔍</button>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    ☰
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+</html>
